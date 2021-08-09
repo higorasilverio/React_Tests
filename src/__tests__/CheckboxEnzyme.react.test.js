@@ -7,14 +7,11 @@ Enzyme.configure({ adapter: new Adapter() })
 
 test("CheckboxWithLabel starts with Off text", () => {
   const checkbox = shallow(<CheckboxWithLabel labelOn="On" labelOff="Off" />)
-
   expect(checkbox.text()).toEqual("Off")
 })
 
 test("CheckboxWithLabel changes the text after click", () => {
   const checkbox = shallow(<CheckboxWithLabel labelOn="On" labelOff="Off" />)
-
   checkbox.find("input").simulate("change")
-
   expect(checkbox.text()).toEqual("On")
 })

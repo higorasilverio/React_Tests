@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import PropTypes from 'prop-types';
 
 const STATUS = {
   HOVERED: "hovered",
@@ -27,5 +28,9 @@ const Link = ({ page, children }) => {
     </a>
   )
 }
+
+Link.propTypes = {
+  page: PropTypes.string.isRequired
+};
 
 export default Link
